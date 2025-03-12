@@ -6,7 +6,7 @@ This repository contains code and resources used in the study **"Exonic Enhancer
 
 ## Overview
 
-- **Paper:** “Exonic Enhancers Emerge as a Common Feature of Gene Regulation” (see `EE_Draft3.docx` for the current manuscript draft).
+- **Paper:** “Exonic Enhancers Emerge as a Common Feature of Gene Regulation” (see bioRxiv DOI:).
 - **Scope:** This project provides scripts, data processing workflows, and experimental validations (e.g., luciferase assays, STARR-seq screens, CRISPRi targeting) that support the identification and characterization of exonic enhancers.
 
 ## Key Analyses
