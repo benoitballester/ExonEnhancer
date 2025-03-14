@@ -56,4 +56,4 @@ Please open an issue in this repository or contact the authors directly for ques
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE). Please see the `LICENSE` file for details.
+This project is licensed under the [GPL-3.0 license](LICENSE). Please see the `LICENSE` file for details.
