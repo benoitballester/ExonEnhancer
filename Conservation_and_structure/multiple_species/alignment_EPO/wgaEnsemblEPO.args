@@ -1,0 +1,3 @@
+homo_sapiens hg38_exonhancers_candidates.bed EPO_hg38_exonhancers_candidates.bed 20G fast
+homo_sapiens control_pos_enhD_NoTSS_TES_10TFmin_benformated.bed EPO_hg38_control_pos.bed 30G long
+homo_sapiens control_neg_NoTF_NoTSS_TES_prom_benformated.bed EPO_hg38_control_neg.bed 20G fast

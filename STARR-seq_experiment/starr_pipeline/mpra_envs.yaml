@@ -1,0 +1,17 @@
+name:
+  mpra_envs
+
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+
+dependencies:
+    - pandas
+    - numpy
+    - biopython
+    - bedtools
+    - samtools
+    - cutadapt
+    - bowtie2
+    - picard

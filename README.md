@@ -1,59 +1,129 @@
-# ExonEnhancer
+# Scripts — Exonic Enhancers Are a Widespread Class of Dual-Function Regulatory Elements
 
-This repository contains code and resources used in the study **"Exonic Enhancers Emerge as a Common Feature of Gene Regulation,"** in which we investigate how certain protein-coding exons can also act as bona fide enhancers (EEs). Our analyses integrate transcription factor binding, chromatin accessibility, and reporter assays to characterize these dual-function regulatory elements across multiple species.
+
 
 ---
 
-## Overview
+## Description
+**Authors**  
+Jean-Christophe Mouren (Contact), Magali Torres, Antoinette van Ouwerkerk, Manosalva, Frederic Gallardo, Salvatore Spicuglia, and Benoit Ballester (Contact).
 
-- **Paper:** “Exonic Enhancers Emerge as a Common Feature of Gene Regulation” (see bioRxiv DOI:).
-- **Scope:** This project provides scripts, data processing workflows, and experimental validations (e.g., luciferase assays, STARR-seq screens, CRISPRi targeting) that support the identification and characterization of exonic enhancers.
+This repository contains the scripts used for data curation, analyses and figures generation in our manuscript:
 
-## Key Analyses
+> **“Exonic enhancers are a widespread class of dual-function regulatory elements.”**  
+> In this study, we redefine the role of exonic regions in gene regulation. We demonstrate that many protein-coding exons function as exonic enhancers (EEs): a previously underappreciated class of cis-regulatory elements embedded within exons.
 
-- **TF ChIP-seq and Open Chromatin Integration**  
-  Scripts that parse TF binding peaks (e.g., from ReMap) and intersect them with DNase-seq/ATAC-seq data.
-  
-- **EE Detection**  
-  Code for defining exonic enhancers based on TF density and filtering out promoter-like exons.
+By integrating TF ChIP-seq, chromatin accessibility data (DNase-seq/ATAC-seq), high-throughput enhancer-reporter assays (STARR-seq, luciferase), and CRISPR-based validations, we show that exonic enhancers (EEs) play crucial roles in gene regulatory networks while retaining their protein-coding function.
 
-- **Reporter Assays**  
-  Protocols for running luciferase and STARR-seq experiments, plus downstream analysis scripts for fold-change calculations.
+**Supplementary Data** is available on [Zenodo](https://zenodo.org/record/15079251).
 
-- **CRISPRi Validation**  
-  Pipelines to design sgRNAs, perform CRISPR interference, and measure expression changes in putative EE-target genes.
-
-- **Variant Analyses**  
-  Tools for mapping variants (from gnomAD or TCGA) onto EEs to evaluate potential regulatory impacts.
+![EE paper schema](schema_github.png)
 
 
 
-## Data Availability
+---
 
-- The data used in this study is publicly available via **Zenodo** at [doi:xxxx](https://doi.org/xxxx). 
-- Additional data sources include:
-  - ChIP-seq, DNase/ATAC-seq, and STARR-seq data integrated from ENCODE, ChIP-Atlas, and public repositories.
-  - Cancer mutation profiles sourced from TCGA PanCancer Atlas.
-- Processed data and final outputs can also be found in the manuscript’s supplementary files.
+## Key Findings
 
+1. **Identification of EEs Across Multiple Species**  
+   - Systematic discovery of EEs using TF ChIP-seq, chromatin accessibility, and STARR-seq data.  
+   - Many protein-coding exons exhibit enhancer activity.
 
-## Citation
+2. **Dual Coding and Regulatory Roles**  
+   - EEs retain protein-coding functions while simultaneously acting as cis-regulatory elements.  
+   - Both synonymous and nonsynonymous variants can disrupt EE activity and downstream gene expression.
 
-If you use this repository or data in your research, please cite:
+3. **Long-Range Interactions and Target Gene Regulation**  
+   - Promoter capture Hi-C and eQTL analyses confirm interactions between EEs and gene promoters.  
+   - CRISPR-based inactivation of EEs demonstrates regulatory effects on both host and distal target genes.
 
-```
-Mouren et al. (2025)
-Exonic Enhancers Emerge as a Common Feature of Gene Regulation
-(Preprint / Journal details / DOI)
-```
+4. **Clinical and Evolutionary Implications**  
+   - Pan-cancer (TCGA) analyses show that mutations in EEs correlate with altered gene expression and clinical outcomes.  
+   - Evolutionary conservation indicates that EEs are functionally constrained yet contribute to species-specific regulatory innovations.
+
+---
+
+## Repository Contents
+Below is a brief description of each folder, organized by thematic for easy navigation and reproducibility :
+
+- **EE_selection/**  
+  Scripts used to define exonic enhancers (EEs) based on TF ChIP-seq peaks and additional filtering criteria.
+
+- **Control_selection/**  
+  Procedures for generating negative/positive control sets, ensuring unbiased comparisons with EEs.
+
+- **Chromatin_accessibility/**  
+  Scritps to curate DNase-seq, ATAC-seq and histones marks datasets assessing open chromatin in exons and EEs across multiple species.
+
+- **Conservation_and_structure/**  
+  Scripts for Multi-species and pairwise alignment, phyloP scores, AlphaFold predictions, MobiDB disorder and gene-age analyses for EEs.
+
+- **TF_randomisation/**  
+  Scripts used to validate TF-binding within EEs through randomization tests.
+
+- **TFBS_in_EE/**  
+  Motif analysis pipeline (e.g., JASPAR-based TFBS predictions) overlapping with exonic enhancers.
+
+- **STARR-seq_experiment/**  
+  Analysis scripts for STARR-seq data, including the reads pipeline and SNPs analysis.
+
+- **STARR-seq_catalog/**  
+  Data curation of STARR-seq peaks from public data sources, as well as EEs biotype signature definition.
+
+- **G-quadruplex/**  
+  Scripts examining G4-forming sequences (G-quadruplex) in EEs vs. control exons.
+
+- **Interaction_data/**  
+  Integration of promoter capture Hi-C, eQTL (GTEx), and ENCODE-rE2G resources to identify robust EE–target gene interactions.
+
+- **gnomADv3_analysis/**  
+  Variant filtering/annotation pipelines for common variants in gnomAD v3 that intersect with exonic enhancers.
+
+- **GWAS_analysis/**  
+  Overlaps of known GWAS loci with EEs to reveal potential trait- and disease-associated variants within coding enhancer regions.
+
+- **PanCancer_analysis/**  
+  Somatic mutations from TCGA across multiple cancer types, intersected with EEs; includes scripts for differential expression and survival analysis.
+
+- **UCSC_trackhub/**  
+  Configurations for easily visualizing EEs, TF binding, and variant positions in the UCSC Genome Browser.
+
+---
+
+## Usage & Reproducibility
+
+1. **Environment Requirements**  
+   - Scripts were primarily run on Python (>= 3.9) and R (>= 4.0).  
+   - Required dependencies include common genomic libraries (e.g., Bioconductor packages in R like `GenomicRanges`) and Python packages like `pandas`, `numpy`, and `pybedtools`.
+
+---
+
+## How to Cite
+
+If you use this dataset, software, or any derived resources, please cite:
+
+> Mouren, J.-C., Torres, M., van Ouwerkerk, A., Manosalva, I., Gallardo, F., Spicuglia, S., & Ballester, B.  
+> **“Supplementary Data — Exonic enhancers are a widespread class of dual-function regulatory elements.”**  
+> Zenodo. [https://doi.org/10.5281/zenodo.15079251](https://doi.org/10.5281/zenodo.15079251)
+
+And the corresponding manuscript:
+
+> Mouren, J.-C., Torres, M., van Ouwerkerk, A., Manosalva, I., Gallardo, F., Spicuglia, S., & Ballester, B.  
+> **“Exonic enhancers are a widespread class of dual-function regulatory elements.”** (Manuscript in preparation.)
+
+---
 
 ## Contact
 
-- **Corresponding Author**:  
-  Benoit Ballester – [benoit.ballester@inserm.fr](mailto:benoit.ballester@inserm.fr)
+For questions regarding the data, scripts, or methods, please contact:
 
-Please open an issue in this repository or contact the authors directly for questions, bug reports, or suggestions.
+**Jean-Christophe Mouren** & **Benoit Ballester**  
+Aix Marseille University, INSERM, TAGC, UMR 1090  
+**Emails:**
+- jean-christophe.mouren@inserm.fr  
+- benoit.ballester@inserm.fr  
 
-## License
+---
 
-This project is licensed under the [GPL-3.0 license](LICENSE). Please see the `LICENSE` file for details.
+We hope this repository helps advance research into exonic enhancers and their dual roles in protein coding and gene regulation. Thank you for your interest!
+

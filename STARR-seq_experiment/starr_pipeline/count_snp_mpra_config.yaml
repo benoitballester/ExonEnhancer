@@ -1,0 +1,38 @@
+workdir: "/mnt/thymus/synoSalva/Nori_Processing/bm_process/mpra"
+# temp_outdir: "/data/thymus_big/nori_processing/bm_process/mpra/20231212_macrogen_EN00003898"
+inp_directory: "/mnt/thymus/sacapus/mw/inp/fastq/20231212_macrogen_EN00003898/"
+
+#Library file :
+enh_library: "/mnt/thymus/synoSalva/Nori_Processing/bm_process/mpra/20231212_macrogen_EN00003898/library/insert_library_mpra.tsv"
+# bowtie2_lib: "/mnt/thymus/synoSalva/Nori_Processing/bm_process/mpra/20231212_macrogen_EN00003898/library/bowtie2_index/lib_enhancer"
+bowtie2_lib: "/mnt/thymus/synoSalva/Nori_Processing/bm_process/mpra/20231212_macrogen_EN00003898/library/bowtie2_index/full_enhancer_index"
+
+
+samples:
+  cDNA:
+    NS:
+      - "AVO1"
+      - "AVO2"
+      - "AVO3"
+      - "AVO4"
+      - "AVO5"
+      - "AVO1MPRARepl6"
+      - "AVO2MRPARepl7"
+      - "AVO3MPRARepl8"
+      - "AVO4MPRARepl9"
+
+    Stim:
+      - "AVO6"
+      - "AVO7"
+      - "AVO8"
+      - "AVO9"
+  Input:
+    - "AVO10"
+
+
+cutadapt:                             
+  # adapter: "TAGAGCATGCACCGG...TCGACGAATTCG"
+  max_n: 0
+  # error_rate: 0.35
+  # min_length: 8
+  # max_length: 12
