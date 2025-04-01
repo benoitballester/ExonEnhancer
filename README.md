@@ -11,7 +11,7 @@ Jean-Christophe Mouren (Contact), Magali Torres, Antoinette van Ouwerkerk, Iris 
 
 This repository contains the scripts used for data curation, analyses and figures generation in our manuscript:
 <div align="center">
-  <h3><strong>“Exonic enhancers are a widespread class of dual-function regulatory elements.”</strong></h3>
+  <h3><strong>“Exonic enhancers are a widespread class of dual-function regulatory elements”</strong></h3>
 </div>
 In this study, we redefine the role of exonic regions in gene regulation. We demonstrate that many protein-coding exons function as exonic enhancers (EEs): a previously underappreciated class of cis-regulatory elements embedded within exons. By integrating TF ChIP-seq, chromatin accessibility data (DNase-seq/ATAC-seq), high-throughput enhancer-reporter assays (STARR-seq, luciferase), and CRISPR-based validations, we show that exonic enhancers (EEs) play crucial roles in gene regulatory networks while retaining their protein-coding function.
 
