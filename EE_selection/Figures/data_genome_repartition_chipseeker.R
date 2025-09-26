@@ -4,6 +4,11 @@ library(TxDb.Mmusculus.UCSC.mm39.refGene)
 library(TxDb.Dmelanogaster.UCSC.dm6.ensGene)
 library(TxDb.Athaliana.BioMart.plantsmart51)
 
+if (!requireNamespace("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+
+BiocManager::install("TxDb.Dmelanogaster.UCSC.dm6.ensGene")
+
 options(ChIPseeker.ignore_1st_exon = TRUE)
 options(ChIPseeker.ignore_1st_intron = TRUE) 
 options(ChIPseeker.ignore_downstream = TRUE)
@@ -33,6 +38,9 @@ dm_nr <-  readPeakFile("/home/mouren/Data/final_files_tokeep/raw_important/remap
 annot_dm_nr <- annotatePeak(dm_nr, tssRegion = c(-500,500), TxDb=txdb_dm)
 plotAnnoPie(annot_dm_nr)
 
+dm_nr <-  readPeakFile("/shared/projects/exonhancer/data/revisions/permut_test/dnase/data/dm6_DNase_ChipAtlas_simplified.bed", header=FALSE)
+annot_dm_nr <- annotatePeak(dm_nr, tssRegion = c(-500,500), TxDb=txdb_dm)
+plotAnnoPie(annot_dm_nr)
 
 tair_nr <-  readPeakFile("/home/mouren/Data/final_files_tokeep/raw_important/remap/nr_summit_switched/tair_summit.bed", header=FALSE)
 annot_tair_nr <- annotatePeak(tair_nr, tssRegion = c(-500,500), TxDb=txdb_tair)

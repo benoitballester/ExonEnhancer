@@ -5,7 +5,7 @@
 ---
 
 ## Description
-**Authors**  
+**Authors** 
 Jean-Christophe Mouren (Contact), Magali Torres, Antoinette van Ouwerkerk, Iris Manosalva, Frederic Gallardo, Salvatore Spicuglia, Benoit Ballester (Contact).
 
 
@@ -13,7 +13,7 @@ This repository contains the scripts used for data curation, analyses and figure
 <div align="center">
   <h3><strong>“Exonic enhancers are a widespread class of dual-function regulatory elements”</strong></h3>
 </div>
-In this study, we redefine the role of exonic regions in gene regulation. We demonstrate that many protein-coding exons function as exonic enhancers (EEs): a previously underappreciated class of cis-regulatory elements embedded within exons. By integrating TF ChIP-seq, chromatin accessibility data (DNase-seq/ATAC-seq), high-throughput enhancer-reporter assays (STARR-seq, luciferase), and CRISPR-based validations, we show that exonic enhancers (EEs) play crucial roles in gene regulatory networks while retaining their protein-coding function.
+In this study, we explore the role of exonic regions in gene regulation in four species. We identify and characterize many protein-coding exons as candidate exonic enhancers (cEEs), a previously underappreciated class of cis-regulatory elements embedded within exons. By integrating TF ChIP-seq, chromatin accessibility data (DNase-seq/ATAC-seq), high-throughput enhancer-reporter assays (STARR-seq, luciferase), and CRISPR-based validations, we show that exonic enhancers (EEs) play crucial roles in gene regulatory networks while retaining their protein-coding function.
 
 
 **Supplementary Data** is available on [Zenodo](https://zenodo.org/record/15079251).
@@ -26,8 +26,8 @@ In this study, we redefine the role of exonic regions in gene regulation. We dem
 
 ## Key Findings
 
-1. **Identification of EEs Across Multiple Species**  
-    - Systematic discovery of EEs using TF ChIP-seq, chromatin accessibility, and STARR-seq data.  
+1. **Identification of cEEs Across Multiple Species**  
+    - Systematic discovery of cEEs using TF ChIP-seq, chromatin accessibility, and STARR-seq data.  
     - Many protein-coding exons exhibit enhancer activity.
 
 2. **Dual Coding and Regulatory Roles**  
@@ -48,46 +48,52 @@ In this study, we redefine the role of exonic regions in gene regulation. We dem
 Below is a brief description of each folder, organized by thematic for easy navigation and reproducibility :
 
 - **EE_selection/**  
-  Scripts used to define exonic enhancers (EEs) based on TF ChIP-seq peaks and additional filtering criteria.
+  Scripts used to define candidate exonic enhancers (cEEs) based on TF ChIP-seq peaks and additional filtering criteria.
 
 - **Control_selection/**  
-  Procedures for generating negative/positive control sets, ensuring unbiased comparisons with EEs.
+  Procedures for generating negative/positive control sets, ensuring unbiased comparisons with cEEs.
 
 - **Chromatin_accessibility/**  
-  Scritps to curate DNase-seq, ATAC-seq and histones marks datasets assessing open chromatin in exons and EEs across multiple species.
+  Scritps to curate DNase-seq, ATAC-seq and histones marks datasets assessing open chromatin in exons and cEEs across multiple species.
 
 - **Conservation_and_structure/**  
-  Scripts for multi-species and pairwise alignment, phyloP scores, AlphaFold predictions, MobiDB disorder rates and gene-age analyses for EEs.
+  Scripts for multi-species and pairwise alignment, phyloP scores, AlphaFold predictions, MobiDB disorder rates and gene-age analyses for cEEs.
 
-- **TF_randomisation/**  
-  Scripts used to validate TF-binding enrichment within EEs through randomization tests.
+- **Randomisation/**  
+  Scripts used to validate enrichment within cEEs through randomization and permutation tests.
 
 - **TFBS_in_EE/**  
-  Motif analysis pipeline (e.g., JASPAR-based TFBS predictions) overlapping with exonic enhancers.
+  Motif analysis pipeline (e.g., JASPAR-based TFBS predictions) overlapping with candidate exonic enhancers.
 
 - **STARR-seq_experiment/**  
   Analysis scripts for STARR-seq data, including the reads pipeline and SNPs analysis.
 
 - **STARR-seq_catalog/**  
-  Data curation of STARR-seq peaks from public data sources, as well as EEs biotype signature definition.
+  Data curation of STARR-seq peaks from public data sources, as well as cEEs biotype signature definition.
 
 - **G-quadruplex/**  
-  Scripts examining G4-forming sequences (G-quadruplex) in EEs vs. control exons.
+  Scripts examining G4-forming sequences (G-quadruplex) in cEEs vs. control exons.
 
 - **Interaction_data/**  
-  Integration of promoter capture Hi-C, eQTL (GTEx), and ENCODE-rE2G resources to identify robust EE–target gene interactions.
+  Integration of promoter capture Hi-C, eQTL (GTEx), and ENCODE-rE2G resources to identify robust cEE–target gene interactions.
 
 - **gnomADv3_analysis/**  
-  Variant filtering/annotation pipelines for common variants in gnomAD v3 that intersect with exonic enhancers.
+  Variant filtering/annotation pipelines and constraint analyses for common variants in gnomAD v3 that intersect with candidate exonic enhancers.
 
 - **GWAS_analysis/**  
-  Overlaps of known GWAS loci with EEs to reveal potential trait- and disease-associated variants within coding enhancer regions.
+  Overlaps of known GWAS loci with cEEs to reveal potential trait- and disease-associated variants within coding enhancer regions.
 
 - **PanCancer_analysis/**  
   Curation and analysis scripts (differential expression and survival analysis) for the TCGA PanCanAtlas.
+  
+- **Genes_specificity/**  
+  Scripts used to infer the cEEs host/target genes expression tendencies. 
+  
+- **CRISPRi_plots/**  
+  Scripts used to generate the CRISPRi figures.
 
 - **UCSC_trackhub/**  
-  Configurations for easily visualizing EEs, TF binding, and variant positions in the UCSC Genome Browser.
+  Configurations for easily visualizing cEEs, TF binding, and variant positions in the UCSC Genome Browser.
 
 ---
 
