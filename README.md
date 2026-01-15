@@ -16,7 +16,7 @@ This repository contains the scripts used for data curation, analyses and figure
 In this study, we explore the role of exonic regions in gene regulation in four species. We identify and characterize many protein-coding exons as candidate exonic enhancers (cEEs), a previously underappreciated class of cis-regulatory elements embedded within exons. By integrating TF ChIP-seq, chromatin accessibility data (DNase-seq/ATAC-seq), high-throughput enhancer-reporter assays (STARR-seq, luciferase), and CRISPR-based validations, we show that exonic enhancers (EEs) play crucial roles in gene regulatory networks while retaining their protein-coding function.
 
 
-**Supplementary Data** is available on [Zenodo](https://zenodo.org/record/15079251).
+**Supplementary Data** is available on [Zenodo](https://doi.org/10.5281/zenodo.17208730).
 
 ![EE paper schema](schema_github.png)
 
@@ -111,12 +111,12 @@ If you use this dataset, software, or any derived resources, please cite:
 
 > Mouren, J.-C., Torres, M., van Ouwerkerk, A., Manosalva, I., Gallardo, F., Spicuglia, S., & Ballester, B.  
 > **“Supplementary Data — Exonic enhancers are a widespread class of dual-function regulatory elements.”**  
-> Zenodo. [https://doi.org/10.5281/zenodo.15079251](https://doi.org/10.5281/zenodo.15079251)
+> Zenodo. [https://doi.org/10.5281/zenodo.17208730](https://doi.org/10.5281/zenodo.17208730)
 
 And the corresponding manuscript:
 
 > Mouren, J.-C., Torres, M., van Ouwerkerk, A., Manosalva, I., Gallardo, F., Spicuglia, S., & Ballester, B.  
-> **“Exonic enhancers are a widespread class of dual-function regulatory elements.”** (Manuscript in preparation.)
+> **“Exonic enhancers are a widespread class of dual-function regulatory elements.”** (Manuscript soon to be published in *Nature Communications*)
 
 ---
 
@@ -125,10 +125,10 @@ And the corresponding manuscript:
 For questions regarding the data, scripts, or methods, please contact:
 
 **Jean-Christophe Mouren** & **Benoit Ballester**  
-Aix Marseille University, INSERM, TAGC, UMR 1090  
+Aix-Marseille University, INSERM, TAGC, UMR 1090, Marseille, France  
 
 **Emails:**
-  - jean-christophe.mouren@inserm.fr  
+  - jean-christophe.mouren@inserm.fr; jcmouren@gmail.com
   - benoit.ballester@inserm.fr  
 
 ---
